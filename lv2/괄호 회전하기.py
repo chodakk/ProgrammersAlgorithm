@@ -11,7 +11,6 @@ def isCorrect(arr) :
     stack = []
     brackets = {"(":")", "{":"}", "[":"]"}
     
-    print(arr)
     for a in arr :
         if a in brackets :
             stack.append(brackets[a])
