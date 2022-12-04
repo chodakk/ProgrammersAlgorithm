@@ -1,9 +1,7 @@
 def solution(arr1, arr2):
     row = len(arr1)
     col = len(arr2[0])
-
     answer = [[0]*col for _ in range(row)]
-
 
     for i in range(0,row) :
         rowArr1 = arr1[i]
@@ -12,7 +10,6 @@ def solution(arr1, arr2):
             for k in range(0, len(arr2)) :
                 value += rowArr1[k] * arr2[k][j]
             answer[i][j] = value
-
 
     return answer
 

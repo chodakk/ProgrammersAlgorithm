@@ -1,12 +1,15 @@
 def solution(n):
-    answer = 0
-    print(longJump(5, 0))
-    return answer
+    if n<3:
+        return n
+    
+    step = [0]*(n+1)
+    step[1] = 1
+    step[2] = 2
 
-def longJump(n,a):
-    if n==1 :
-        return a+1
-    else :
-        return longJump(n-1, a+1)
+    for i in range(3, n+1) :
+        step[i] = step[i-1]+step[i-2]
+
+    return step[n]%1234567
+
 
 print(solution(4))
