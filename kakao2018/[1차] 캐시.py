@@ -11,12 +11,12 @@ def solution(cacheSize, cities):
         if city in cityList : #LRU
             cityList.remove(city)
             cityList.append(city)
-            answer+=1
+            answer+=1 #cache hit
         else :
             if len(cityList)==cacheSize :
                 cityList.pop(0) #LRU
-            cityList.append(city)
-            answer+=5
+            cityList.append(city) 
+            answer+=5 #cache miss
     
     return answer
 
